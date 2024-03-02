@@ -10,14 +10,15 @@ class HomeController extends Controller
 {
     function index () {
 
+        $token = "Bearer patNYCefWWjQibU6W.e2201096bf00714b79cd86ed60840926cbe8e69e3c29ba8b03becc3d390c6069";
         $responseTeam = Http::withHeaders([
-            'Authorization' => 'Bearer patQqOGwFwsM0prpt.fce269ceda1c9bb03cbbccbbc00fa3cb40937241a3d0315817d49997b5012b6b'
-        ])->get('https://api.airtable.com/v0/app2OeydkfqPNn9gn/team');
+            'Authorization' => $token
+        ])->get('https://api.airtable.com/v0/appNNNZJNjqNrOPAE/team');
         $teams = $responseTeam['records'];
 
         $responseTesti = Http::withHeaders([
-            'Authorization' => 'Bearer patQqOGwFwsM0prpt.fce269ceda1c9bb03cbbccbbc00fa3cb40937241a3d0315817d49997b5012b6b'
-        ])->get('https://api.airtable.com/v0/app2OeydkfqPNn9gn/testi');
+            'Authorization' => $token
+        ])->get('https://api.airtable.com/v0/appNNNZJNjqNrOPAE/testi');
         $testis = $responseTesti['records'];
 
         // dd($testis);

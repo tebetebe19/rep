@@ -462,7 +462,7 @@
                                 </div>
                                 <div class="team-1-author-info">
                                     <h4 class="fs_21 c_light">{{ $team['fields']['name'] }}</h4>
-                                    <p class="fs_13 ff_sec c_light mb_0 tt_u">{{ $team['fields']['level'] }}</p>
+                                    <p class="fs_13 ff_sec c_light mb_0 tt_u">{{ $team['fields']['title'] }}</p>
                                 </div>
                             </div>
                         </div>
@@ -496,17 +496,18 @@
                                             <div class="testimonials-1-top-content">
                                                 <div class="testimonials-1-quote"><i class="flaticon-quotation"></i>
                                                 </div>
-                                                <div class="testimonials-1-desc">{{ $testi['fields']['testimonials'] }}
+                                                <div class="testimonials-1-desc">{{ $testi['fields']['testi'] }}
                                                 </div>
                                             </div>
                                             <div class="testimonials-1-author">
                                                 <div class="testimonials-1-author-image"><img
-                                                        src="assets/images/resource/author-3.jpg" alt="">
+                                                        src="{{ $testi['fields']['picture'][0]['url'] }}"
+                                                        alt="">
                                                 </div>
                                                 <div class="testimonials-1-author-title">{{ $testi['fields']['name'] }}
                                                 </div>
                                                 <div class="testimonials-1-designation">
-                                                    {{ $testi['fields']['position'] }}</div>
+                                                    {{ $testi['fields']['title'] }}</div>
                                             </div>
                                         </div>
                                     </div>
